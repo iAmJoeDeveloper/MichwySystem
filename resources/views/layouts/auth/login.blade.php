@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <title>Laravel</title>
+        <title>MichWi</title>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="{{asset('materialize/css/materialize.css')}}"  media="screen,projection"/>
@@ -21,26 +21,30 @@
             </div>
             
             <div class="col s6" style="background-color:white; height: 100%; margin-bottom: 0;">
-                <h2 class="center">Login</h2>
-
-                <div class="row">
-                    <div class="container">
-                        <form action="" method="post" class="center">
-                            <div class="col s1">
-                                <i class="material-icons">account_circle</i>
-                            </div>
-                            <div class="input-field col s11">
-                                <label for="username">Username</label>
-                                <input placeholder="Username" id="username" type="text" class="validate">
-                            </div>
-                            <div class="col s1">
-                                <i class="material-icons" style="margin-top: 30px;">lock</i>
-                            </div>
-                            <div class="input-field col s11">
-                                <input placeholder="Password" id="pass" type="text" class="validate">
-                                <label for="pass">Password</label>
-                            </div>
-                        </form>
+                <div class="formulario center">
+                    <h2 class="center">Login</h2>
+                    <div class="row">
+                        <div class="container">
+                            <form action="" method="post" class="center">
+                                <div class="col s1">
+                                    <i class="material-icons">account_circle</i>
+                                </div>
+                                <div class="input-field col s11">
+                                    <label for="username">Username</label>
+                                    <input placeholder="Username" id="username" type="text" class="validate">
+                                </div>
+                                <div class="col s1">
+                                    <i class="material-icons" style="margin-top: 30px;">lock</i>
+                                </div>
+                                <div class="input-field col s11">
+                                    <input placeholder="Password" id="pass" type="text" class="validate">
+                                    <label for="pass">Password</label>
+                                </div>
+                                <button class="btn waves-effect waves-light red darken-3" type="submit" name="action">Submit
+                                  <i class="material-icons right">send</i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
