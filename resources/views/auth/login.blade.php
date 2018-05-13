@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
         <title>MichWi</title>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="{{asset('materialize/css/materialize.css')}}"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="{{asset('css/app.css')}}"  media="screen,projection"/>
         <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
     </head>
     <body style="background-color: blue;">
@@ -32,7 +33,7 @@
                                         <i class="material-icons">account_circle</i>
                                     </div>
                                     <div class="input-field col s11">
-                                        <label for="username">Email</label>
+                                        <!-- <label for="username">Email</label> -->
                                         <input placeholder="Email" id="email" type="email" name="email" class="validate{{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}" required autofocus>
 
                                          @if ($errors->has('email'))
@@ -50,7 +51,7 @@
                                     </div>
                                     <div class="input-field col s11">
                                         <input placeholder="Password" id="pass" name="password" type="password" class="validate{{ $errors->has('password') ? ' is-invalid' : '' }}" required>
-                                        <label for="pass">Password</label>
+                                        <!-- <label for="pass">Password</label> -->
 
                                         @if ($errors->has('password'))
                                             <span class="invalid-feedback">
@@ -71,6 +72,6 @@
             
         </div>         
            
-        <script type="text/javascript" src="{{asset('materialize/js/materialize.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
     </body>
 </html>
