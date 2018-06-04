@@ -1,95 +1,58 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{asset('css/app.css')}}"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
+</head>
+<body>
+  <header>
+    <nav class="pink darken-1">
+      <div class="nav-wrapper">
+        @if (Route::has('login'))
+        <a href="#" class="brand-logo">Michwy</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          @auth
+          <li><a href="{{ url('/main') }}">Main</a></li>
+          @else
+          <li><a href="{{ route('login') }}">Login</a></li>
+          <li><a href="{{ route('register') }}">Registro</a></li>
+          @endauth
+        </ul>
+        @endif
+      </div>
+   </nav>
+  </header>
 
-            .full-height {
-                height: 100vh;
-            }
+   <div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item pink lighten-2 black-text" href="#one!">
+      <h2>Bienvenido a Michwy</h2>
+      <p class="white-text">This is your..</p>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+  <script>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+  // Or with jQuery
 
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    MICHWI
-                </div>
-
-                <div class="links">
-                    <a href="/main">Main</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+  </script>
+</body>
 </html>

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         
-        <title>MichWi</title>
+        <title>Login</title>
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="{{asset('css/app.css')}}"  media="screen,projection"/>
@@ -15,7 +15,7 @@
     <body style="background-color: blue;">
         
         <div class="row" style="height: 100%; margin-bottom: 0;">
-            <div class="col s6 red darken-3" style="height: 100%;">
+            <div class="col s6 pink darken-1s" style="height: 100%;">
                 <div>
                     <h2 class="center" style="margin-top:40%; color: white;">Michwi</h2>
                 </div>
@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
 
-                                <button class="btn waves-effect waves-light red darken-3" type="submit">Submit
+                                <button class="btn waves-effect waves-light pink darken-1" type="submit">Submit
                                   <i class="material-icons right">send</i>
                                 </button>
                             </form>
